@@ -1,0 +1,26 @@
+{
+  "name": "firstapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.13",
+    "morgan": "^1.9.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
