@@ -4,7 +4,7 @@ var config = require('./config/config');
 var mongoose = require('mongoose');
 
 //db connection
-mongoose.connect(config.url);
+mongoose.connect(config.url, {useNewUrlParser: true , useCreateIndex: true});
 
 var app = express();
 

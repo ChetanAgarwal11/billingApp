@@ -5,6 +5,10 @@ var categorySchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true
+    },
+    slab: {
+        type: String,
+        required: true
     }
 });
 
