@@ -7,13 +7,22 @@ class Home extends Component {
 
     componentWillMount(){
         console.log('home will mount');
-        fetch('https://jsonplaceholder.typicode.com/todos',{ method : 'get'})
-        .then(res => res.json())
-        .then(json => {console.log(json)
-        this.setState({data : json})
-        }).catch((e) => {
-            console.log(e);
-        })
+        const cachedHits = localStorage.getItem('data');
+        if (cachedHits) {
+        this.setState({ data: JSON.parse(cachedHits) });
+        return;
+        }else{
+            
+            fetch('https://jsonplaceholder.typicode.com/todos',{ method : 'get'})
+            .then(res => res.json())
+            .then(json => {
+                console.log(json);
+                localStorage.setItem('data',JSON.stringify(json));
+                this.setState({data : json})
+            }).catch((e) => {
+                console.log(e);
+            })
+        }   
     }
 
 
